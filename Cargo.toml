@@ -1,13 +1,11 @@
 [workspace]
 members = [
-    "acceptance",
     "derive-macros",
     "ffi",
-    "kernel",
-    "kernel/examples/*",
+    "kernel"
 ]
 # Only check / build main crates by default (check all with `--workspace`)
-default-members = ["acceptance", "kernel"]
+default-members = ["kernel"]
 resolver = "2"
 
 [workspace.package]
@@ -19,19 +17,5 @@ repository = "https://github.com/delta-incubator/delta-kernel-rs"
 readme = "README.md"
 version = "0.4.0"
 
-[workspace.dependencies]
-arrow = { version = ">=53, <54" }
-arrow-arith = { version = ">=53, <54" }
-arrow-array = { version = ">=53, <54" }
-arrow-buffer = { version = ">=53, <54" }
-arrow-cast = { version = ">=53, <54" }
-arrow-data = { version = ">=53, <54" }
-arrow-ord = { version = ">=53, <54" }
-arrow-json = { version = ">=53, <54" }
-arrow-select = { version = ">=53, <54" }
-arrow-schema = { version = ">=53, <54" }
-parquet = { version = ">=53, <54", features = ["object_store"] }
-object_store = { version = ">=0.11, <0.12" }
-hdfs-native-object-store = "0.12.0"
-hdfs-native = "0.10.0"
-walkdir = "2.5.0"
+[dependencies]
+getrandom = { version = "0.2", features = ["js"] }
