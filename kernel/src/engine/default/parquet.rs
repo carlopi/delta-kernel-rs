@@ -324,7 +324,8 @@ impl FileOpener for PresignedUrlOpener {
         let predicate = self.predicate.clone();
         let limit = self.limit;
         let client = self.client.clone(); // uses Arc internally according to reqwest docs
-
+	panic!("FIXME");
+/*
         Ok(Box::pin(async move {
             // fetch the file from the interweb
             let reader = client.get(file_meta.location).send().await?.bytes().await?;
@@ -363,6 +364,7 @@ impl FileOpener for PresignedUrlOpener {
             });
             Ok(stream.boxed())
         }))
+*/
     }
 }
 
