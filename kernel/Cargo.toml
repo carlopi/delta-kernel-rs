@@ -42,10 +42,10 @@ visibility = "0.1.1"
 tempfile = { version = "3", optional = true }
 # Used in default engine
 # Used in default and sync engine
-parquet = { workspace = true, optional = true }
+#parquet = { workspace = true, optional = true }
 # Used for fetching direct urls (like pre-signed urls)
-reqwest = { version = "0.12.7", optional = true }
-strum = { version = "0.26", features = ["derive"] }
+#reqwest = { version = "0.12.7", optional = true }
+#strum = { version = "0.26", features = ["derive"] }
 
 
 [features]
