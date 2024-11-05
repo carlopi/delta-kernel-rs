@@ -41,17 +41,6 @@ visibility = "0.1.1"
 # Used in the sync engine
 tempfile = { version = "3", optional = true }
 # Used in default engine
-arrow-buffer = { workspace = true, optional = true }
-arrow-array = { workspace = true, optional = true, features = ["chrono-tz"] }
-arrow-select = { workspace = true, optional = true }
-arrow-arith = { workspace = true, optional = true }
-arrow-cast = { workspace = true, optional = true }
-arrow-json = { workspace = true, optional = true }
-arrow-ord = { workspace = true, optional = true }
-arrow-schema = { workspace = true, optional = true }
-futures = { version = "0.3", optional = true }
-object_store = { workspace = true, optional = true }
-hdfs-native-object-store = { workspace = true, optional = true }
 # Used in default and sync engine
 parquet = { workspace = true, optional = true }
 # Used for fetching direct urls (like pre-signed urls)
