@@ -106,7 +106,8 @@ impl<E: TaskExecutor> FileSystemClient for ObjectStoreFileSystemClient<E> {
         // Because there will already be buffering in the stream, we set the
         // buffer size to 0.
         let (sender, receiver) = std::sync::mpsc::sync_channel(0);
-
+	panic!("FIXME");
+/*
         self.task_executor.spawn(
             futures::stream::iter(files)
                 .map(move |(url, range)| {
@@ -147,7 +148,7 @@ impl<E: TaskExecutor> FileSystemClient for ObjectStoreFileSystemClient<E> {
                     futures::future::ready(())
                 }),
         );
-
+*/
         Ok(Box::new(receiver.into_iter()))
     }
 }
